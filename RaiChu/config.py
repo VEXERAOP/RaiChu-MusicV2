@@ -21,7 +21,9 @@ BOT_USERNAME = getenv("BOT_USERNAME")
 ASSISTANT_NAME = getenv("ASSISTANT_NAME", "null")
 GROUP_SUPPORT = getenv("GROUP_SUPPORT")
 UPDATES_CHANNEL = getenv("UPDATES_CHANNEL")
-SUDO_USERS = list(map(int, getenv("SUDO_USERS").split()))
+OWNER_ID = list(
+    map(int, getenv("OWNER_ID", "").split())
+)  #
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! .").split())
 ALIVE_IMG = getenv("ALIVE_IMG", "https://telegra.ph/file/c83b000f004f01897fe18.png")
 DURATION_LIMIT = int(getenv("DURATION_LIMIT", "60"))
